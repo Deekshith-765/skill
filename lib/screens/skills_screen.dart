@@ -5,7 +5,7 @@ import '../providers/skill_provider.dart';
 import '../widgets/skill_card.dart';
 
 class SkillsScreen extends StatefulWidget {
-  const SkillsScreen({Key? key}) : super(key: key);
+  const SkillsScreen({super.key});
 
   @override
   State<SkillsScreen> createState() => _SkillsScreenState();
@@ -129,7 +129,7 @@ class _SkillsScreenState extends State<SkillsScreen> {
 
 
 class CreateSkillScreen extends StatelessWidget {
-  const CreateSkillScreen({Key? key}) : super(key: key);
+  const CreateSkillScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +143,7 @@ class CreateSkillScreen extends StatelessWidget {
 class SkillDetailScreen extends StatelessWidget {
   final SkillModel skill;
 
-  const SkillDetailScreen({Key? key, required this.skill}) : super(key: key);
+  const SkillDetailScreen({super.key, required this.skill});
 
   @override
   Widget build(BuildContext context) {
