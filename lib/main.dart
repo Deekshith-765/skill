@@ -6,18 +6,12 @@ import 'screens/auth_screen.dart';
 import 'screens/skills_screen.dart';
 import 'providers/user_provider.dart';
 import 'providers/skill_provider.dart';
+import 'firebase_options.dart'; // Import the generated firebase_options.dart
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: const FirebaseOptions(
-      apiKey: "AIzaSyDK1movts_7qfk8SpQvxXjSOzZ7yRWkV7U",
-      appId: "1:703306560732:android:0ef377dbc24302f70d3019",
-      messagingSenderId: "703306560732",
-      projectId: "skillcycle-7",
-      authDomain: "skillcycle-7.firebaseapp.com",
-      storageBucket: "skillcycle-7.appspot.com",
-    ),
+    options: DefaultFirebaseOptions.currentPlatform, // Use the generated options
   );
 
   runApp(const MyApp());

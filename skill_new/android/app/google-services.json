@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "215842570107",
+    "project_id": "skillcycle-07",
+    "storage_bucket": "skillcycle-07.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215842570107:android:015d707e5272eae92f47de",
+        "android_client_info": {
+          "package_name": "com.example.skill"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK1movts_7qfk8SpQvxXjSOzZ7yRWkV7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215842570107:android:e6a96e198b0c94522f47de",
+        "android_client_info": {
+          "package_name": "com.example.skillcycle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK1movts_7qfk8SpQvxXjSOzZ7yRWkV7U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

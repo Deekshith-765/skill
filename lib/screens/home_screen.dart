@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SkillCycle Dashboard"),
+        title: const Text("SkillCycle Dashboard"),
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
             onPressed: () {
               FirebaseAuth.instance.signOut();
             },
@@ -18,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: GridView.count(
         crossAxisCount: 2,
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         crossAxisSpacing: 15,
         mainAxisSpacing: 15,
         children: [
@@ -37,16 +39,16 @@ class HomeScreen extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: InkWell(
         onTap: () {
-          print("$title Clicked");
+          debugPrint("$title Clicked");
         },
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(icon, size: 50, color: Colors.blue),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(title,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 16, fontWeight: FontWeight.bold)),
             ],
           ),
