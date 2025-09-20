@@ -3,28 +3,28 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'home_screen.dart';
 
 class AuthScreen extends StatelessWidget {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  const AuthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
-      stream: _auth.authStateChanges(),
+      stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else if (snapshot.hasData) {
-          // ✅ User logged in → go to HomeScreen
+          // User logged in → go to HomeScreen
           return HomeScreen();
         } else {
-          // ✅ Show login screen
+          // Show login screen
           return Scaffold(
-            appBar: AppBar(title: Text("Login to SkillCycle")),
+            appBar: AppBar(title: const Text("Login to SkillCycle")),
             body: Center(
               child: ElevatedButton(
                 onPressed: () async {
-                  await _auth.signInAnonymously();
+                  await FirebaseAuth.instance.signInAnonymously();
                 },
-                child: Text("Login (Anonymous)"),
+                child: const Text("Login (Anonymous)"),
               ),
             ),
           );
